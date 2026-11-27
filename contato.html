@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bom and good.css">
+    <script src="scriptsss.js" defer></script>
+    <script src="contas.js" defer></script>
+    <title>Contato | Poderoso Timão</title>
+</head>
+<body>
+    <header class="DivPAI">
+        <div class="fiote">
+            <a class="Menu" href="index.html" aria-label="Página inicial">
+                <img src="poderoso.jpg" alt="Logo Poderoso Timão">
+            </a>
+        </div>
+        <nav class="links-barra" aria-label="Links principais">
+            <a class="link-barra" href="TODAS.html">Notícias</a>
+            <a class="link-barra" href="jogadores.html">Jogadores</a>
+            <a class="link-barra" href="videos.html">Vídeos</a>
+            <a class="link-barra" href="conta.html" data-conta-link>Cadastrar</a>
+        </nav>
+        <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-lateral">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="botoes" id="menu-lateral" aria-label="Menu principal">
+            <button class="botao" type="button">Venha torcer!</button>
+            <a class="botao-link" href="tabela.html">Tabela</a>
+            <a class="botao-link" href="contato.html" aria-current="page">Contato</a>
+            <a class="botao-link" href="criar.html" data-admin-access hidden>Criar</a>
+            <div class="grupo-menu">
+                <h2 class="titulo-menu">Mais do Timão</h2>
+                <a class="botao-extra" href="classificacao.html">Classificação</a>
+                <a class="botao-extra" href="proximos-jogos.html">Próximos jogos</a>
+                <a class="botao-extra" href="resultados.html">Resultados</a>
+                <a class="botao-extra" href="calendario.html">Calendário</a>
+            </div>
+        </nav>
+    </header>
+    <button class="fundo-menu" type="button" aria-label="Fechar menu" hidden></button>
+
+    <main>
+        <section class="contato-area" aria-labelledby="titulo-contato">
+            <div class="contato-conteudo">
+                <div class="contato-informacoes">
+                    <h1 id="titulo-contato">Entre em contato</h1>
+                    <dl>
+                        <div>
+                            <dt>Endereço:</dt>
+                            <dd>Neo Química Arena, São Paulo</dd>
+                        </div>
+                        <div>
+                            <dt>Telefone:</dt>
+                            <dd><a href="tel:+551112345678">(11) 1234-5678</a></dd>
+                        </div>
+                        <div>
+                            <dt>Email:</dt>
+                            <dd><a href="mailto:contato@poderosotimao.com.br">contato@poderosotimao.com.br</a></dd>
+                        </div>
+                    </dl>
+                    <a class="botao-whatsapp" href="https://wa.me/551112345678" target="_blank" rel="noopener noreferrer">
+                        <img src="whatsapp.png" alt=""> Fale no WhatsApp
+                    </a>
+                </div>
+
+                <form class="formulario-contato" action="mailto:contato@poderosotimao.com.br" method="post" enctype="text/plain">
+                    <label class="texto-acessivel" for="nome-contato">Nome completo</label>
+                    <input id="nome-contato" name="Nome" type="text" placeholder="Nome Completo" autocomplete="name" required>
+
+                    <label class="texto-acessivel" for="email-contato">E-mail</label>
+                    <input id="email-contato" name="E-mail" type="email" placeholder="E-mail" autocomplete="email" required>
+
+                    <label class="texto-acessivel" for="assunto-contato">Assunto</label>
+                    <input id="assunto-contato" name="Assunto" type="text" placeholder="Assunto" required>
+
+                    <label class="texto-acessivel" for="mensagem-contato">Mensagem</label>
+                    <textarea id="mensagem-contato" name="Mensagem" placeholder="Mensagem" required></textarea>
+
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+        <section class="contato-final" aria-label="Contato">
+            <h2>Fale com a gente!</h2>
+        </section>
+    </main>
+</body>
+</html>

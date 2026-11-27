@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bom and good.css">
+    <script src="contas.js" defer></script>
+    <script src="senha-toggle.js" defer></script>
+    <title>Conta | Poderoso Timão</title>
+</head>
+<body class="pagina-admin">
+    <main class="painel-admin painel-conta">
+        <a class="voltar-site" href="index.html">← Voltar ao site</a>
+        <section id="estado-conta" hidden>
+            <div class="perfil-conta">
+                <img src="avatar-anonimo.svg" alt="Foto de perfil anônima">
+                <div>
+                    <h1 id="nome-conta"></h1>
+                    <p id="email-conta"></p>
+                </div>
+            </div>
+            <button id="sair-conta" type="button">Sair da conta</button>
+        </section>
+        <section id="acesso-conta">
+            <h1>Conta Poderoso Timão</h1>
+            <div class="abas-conta" role="tablist" aria-label="Acesso à conta">
+                <button id="aba-cadastro" type="button" role="tab" aria-selected="true" aria-controls="form-cadastro">Cadastrar</button>
+                <button id="aba-login" type="button" role="tab" aria-selected="false" aria-controls="form-login-conta">Entrar</button>
+            </div>
+            <form class="formulario-admin" id="form-cadastro">
+                <label for="nome-nova-conta">Nome</label>
+                <input id="nome-nova-conta" name="nome" type="text" autocomplete="name" required>
+                <label for="email-nova-conta">E-mail</label>
+                <input id="email-nova-conta" name="email" type="email" autocomplete="email" required>
+                <label for="senha-nova-conta">Senha (mínimo 8 caracteres)</label>
+                <div class="campo-senha">
+                    <input id="senha-nova-conta" name="senha" type="password" minlength="8" autocomplete="new-password" required>
+                    <button class="botao-senha" type="button" aria-controls="senha-nova-conta" aria-label="Mostrar senha" aria-pressed="false">
+                        <svg class="icone-olho-fechado" aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M3 8c2.7 4 5.7 6 9 6s6.3-2 9-6M3.5 8l-2-2m4.3 4.5-1.6 2m4.7-.1-.5 2.5m7.2-2.5.5 2.5m2.8-4.4 1.6 2m.4-4.5 2-2"/>
+                        </svg>
+                        <svg class="icone-olho-aberto" aria-hidden="true" viewBox="0 0 24 24" hidden>
+                            <path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12Z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="mensagem-formulario" id="mensagem-cadastro" role="alert" aria-live="polite"></p>
+                <button type="submit">Criar conta</button>
+            </form>
+            <form class="formulario-admin" id="form-login-conta" hidden>
+                <label for="email-login-conta">E-mail</label>
+                <input id="email-login-conta" name="email" type="email" autocomplete="username" required>
+                <label for="senha-login-conta">Senha</label>
+                <div class="campo-senha">
+                    <input id="senha-login-conta" name="senha" type="password" autocomplete="current-password" required>
+                    <button class="botao-senha" type="button" aria-controls="senha-login-conta" aria-label="Mostrar senha" aria-pressed="false">
+                        <svg class="icone-olho-fechado" aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M3 8c2.7 4 5.7 6 9 6s6.3-2 9-6M3.5 8l-2-2m4.3 4.5-1.6 2m4.7-.1-.5 2.5m7.2-2.5.5 2.5m2.8-4.4 1.6 2m.4-4.5 2-2"/>
+                        </svg>
+                        <svg class="icone-olho-aberto" aria-hidden="true" viewBox="0 0 24 24" hidden>
+                            <path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12Z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="mensagem-formulario" id="mensagem-login-conta" role="alert" aria-live="polite"></p>
+                <button type="submit">Entrar</button>
+            </form>
+            <p class="aviso-conta">Esta conta é apenas para uso comum e não permite publicar notícias.</p>
+        </section>
+    </main>
+</body>
+</html>

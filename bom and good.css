@@ -1,0 +1,1461 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(226, 226, 226);
+  padding-top: 88px;
+}
+
+.DivPAI {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+
+  width: 100%;
+  height: 88px;
+  padding: 10px 24px;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+.fiote {
+  width: auto;
+  height: auto;
+  background: transparent;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.Menu {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.Menu img {
+  width: 120px;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+.botoes {
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+}
+
+.botao,
+.botao-2,
+.botao-3,
+.botao-4,
+.botao-link,
+.botao-extra {
+  padding: 14px 22px;
+  font-size: 18px;
+  border: none;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+ 
+}
+.botoes{
+   display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.Menu img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+.links-barra {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link-barra {
+  display: block;
+  padding: 18px 24px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link-barra:hover {
+  border-radius: 4px;
+  background: white;
+  color: black;
+}
+
+.botao:hover,
+.botao-2:hover,
+.botao-3:hover,
+.botao-4:hover,
+.botao-link:hover,
+.botao-extra:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+  border-radius:4px;
+  font-weight:400px;
+}
+
+.botoes a {
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.grupo-menu {
+  width: 100%;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #444;
+}
+
+.titulo-menu {
+  padding: 8px 20px;
+  color: #aaa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.conteudo {
+  padding: 32px 24px;
+}
+
+.grade-noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.grade-noticias .noticia {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 16px;
+  align-items: stretch;
+}
+
+.grade-noticias .texto-noticia {
+  max-width: none;
+}
+
+.noticia {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.imagem-com-titulo {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.imagem-noticia {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.texto-noticia {
+  max-width: 700px;
+}
+
+.texto-noticia h1 {
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+
+.texto-noticia p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.noticia > a {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imagem-com-titulo > a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+}
+
+.imagem-noticia:hover {
+  transform: scale(1.05);
+}
+.etiqueta-imagem {
+  position: static;
+  display: inline-block;
+  padding: 8px 10px;
+  background: black;
+  color: white;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.texto-noticia p {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+.pagina-noticia {
+  padding: 32px 24px;
+}
+
+.materia {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+}
+
+.materia + .materia {
+  margin-top: 24px;
+}
+
+.materia h1 {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.linha-fina {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.foto-confronto {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.imagem-materia {
+  margin-bottom: 24px;
+}
+
+.legenda-foto {
+  margin-top: 8px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.texto-materia h2 {
+  margin-bottom: 12px;
+}
+
+.texto-materia p {
+  margin-bottom: 16px;
+  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.video-destaques {
+  margin-top: 32px;
+}
+
+.video-destaques h2 {
+  margin-bottom: 12px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.video-container {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.link-video {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.link-video a {
+  color: #111;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.instrucao-video {
+  margin-top: 8px;
+  color: #555;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 112px;
+  }
+
+  .DivPAI {
+    height: 112px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    gap: 4px 8px;
+    padding: 8px 12px;
+  }
+
+  .fiote {
+    order: 1;
+  }
+
+  .botao-menu {
+    order: 2;
+  }
+
+  .links-barra {
+    order: 3;
+    flex: 1 0 100%;
+    justify-content: center;
+    gap: 12px;
+    overflow-x: auto;
+  }
+
+  .link-barra {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .Menu img {
+    width: 96px;
+  }
+
+  .botao-menu {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 0;
+    background: #292929;
+    cursor: pointer;
+  }
+
+  .botao-menu span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: white;
+  }
+
+  .botoes {
+    position: fixed;
+    top: 112px;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    width: 85vw;
+    max-width: 280px;
+    height: calc(100vh - 112px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow-y: auto;
+    padding: 8px 0;
+    background: #202020;
+    box-shadow: 4px 0 12px rgb(0 0 0 / 25%);
+    transform: translateX(-105%);
+    transition: transform 0.25s ease, visibility 0.25s ease;
+    visibility: hidden;
+  }
+
+  .botoes.aberto {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .botao,
+  .botao-2,
+  .botao-3,
+  .botao-4,
+  .botao-link,
+  .botao-extra {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 20px;
+    border: 0;
+    border-bottom: 1px solid #444;
+    background: #292929;
+    color: white;
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .botao:hover,
+  .botao-2:hover,
+  .botao-3:hover,
+  .botao-4:hover,
+  .botao-link:hover,
+  .botao-extra:hover {
+    transform: none;
+    border-radius: 0;
+    background: #3a3a3a;
+    color: white;
+  }
+
+  .fundo-menu:not([hidden]) {
+    position: fixed;
+    inset: 112px 0 0;
+    z-index: 998;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 112px);
+    border: 0;
+    background: rgb(0 0 0 / 50%);
+  }
+
+  .conteudo {
+    padding: 20px 12px;
+  }
+
+  .grade-noticias {
+    grid-template-columns: 1fr;
+  }
+
+  .noticia {
+    margin: 12px auto;
+    padding: 16px;
+  }
+
+  .texto-noticia h1 {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 601px) {
+  .DivPAI {
+    justify-content: space-between;
+  }
+
+  .links-barra {
+    flex: 0 1 auto;
+  }
+
+  .botao-menu {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    background: #292929;
+    cursor: pointer;
+  }
+
+  .botao-menu span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: white;
+  }
+
+  .botoes {
+    position: fixed;
+    top: 68px;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    width: 280px;
+    height: calc(100vh - 68px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow-y: auto;
+    padding: 8px 0;
+    background: #202020;
+    box-shadow: 4px 0 12px rgb(0 0 0 / 25%);
+    transform: translateX(-105%);
+    transition: transform 0.25s ease, visibility 0.25s ease;
+    visibility: hidden;
+  }
+
+  .botoes.aberto {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .botao,
+  .botao-2,
+  .botao-3,
+  .botao-4,
+  .botao-link,
+  .botao-extra {
+    width: 100%;
+    padding: 16px 20px;
+    border: 0;
+    border-bottom: 1px solid #444;
+    background: #292929;
+    color: white;
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .botao:hover,
+  .botao-2:hover,
+  .botao-3:hover,
+  .botao-4:hover,
+  .botao-link:hover,
+  .botao-extra:hover {
+    transform: none;
+    border-radius: 0;
+    background: #3a3a3a;
+    color: white;
+  }
+
+  .fundo-menu:not([hidden]) {
+    position: fixed;
+    inset: 68px 0 0;
+    z-index: 998;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 68px);
+    border: 0;
+    background: rgb(0 0 0 / 50%);
+  }
+}
+
+/* Layout inspirado em um portal esportivo, com destaque e cards de notícias. */
+body {
+  padding-top: 68px;
+  background: #f1f1f1;
+}
+
+.DivPAI {
+  height: 68px;
+  padding: 6px max(16px, calc((100% - 980px) / 2));
+  gap: 20px;
+  border-bottom: 3px solid #f4d43b;
+}
+
+.Menu img {
+  width: 128px;
+}
+
+.links-barra {
+  gap: 0;
+}
+
+.link-barra {
+  padding: 16px 18px;
+  border: 0;
+  border-left: 1px solid #454545;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.botao-menu {
+  flex: 0 0 44px;
+  border: 1px solid #f4d43b;
+  background: #f4d43b;
+}
+
+.botao-menu span {
+  background: #111;
+}
+
+.conteudo {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.conteudo > h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.grade-noticias {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 0;
+}
+
+.grade-noticias .noticia,
+.noticia {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+  background: #fff;
+  text-align: left;
+}
+
+.imagem-com-titulo {
+  max-width: none;
+  gap: 10px;
+}
+
+.etiqueta-imagem {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.imagem-com-titulo > a {
+  border-radius: 0;
+}
+
+.imagem-noticia {
+  height: 240px;
+  object-fit: cover;
+}
+
+.texto-noticia {
+  max-width: none;
+  padding: 10px 4px 4px;
+}
+
+.texto-noticia h1,
+.texto-noticia h2 {
+  margin-bottom: 8px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.texto-noticia p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.destaques-inicio .noticia-destaque {
+  grid-column: 1 / -1;
+  padding: 10px;
+}
+
+.noticia-destaque .imagem-noticia {
+  height: auto;
+  object-fit: contain;
+}
+
+.noticia-destaque .texto-noticia h1 {
+  font-size: clamp(26px, 3.2vw, 38px);
+}
+
+.pagina-noticia {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.materia {
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 132px;
+  }
+
+  .DivPAI {
+    height: 132px;
+    padding: 8px 12px;
+  }
+
+  .links-barra {
+    flex: 1 0 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .links-barra::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link-barra {
+    flex: 0 0 auto;
+    padding: 9px 16px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .botoes {
+    top: 132px;
+    height: calc(100vh - 132px);
+  }
+
+  .fundo-menu:not([hidden]) {
+    inset: 132px 0 0;
+    height: calc(100vh - 132px);
+  }
+
+  .conteudo {
+    width: calc(100% - 24px);
+    padding-top: 18px;
+  }
+
+  .grade-noticias {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .destaques-inicio .noticia-destaque {
+    grid-column: auto;
+  }
+
+  .noticia-destaque .imagem-noticia {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .imagem-noticia {
+    height: 210px;
+  }
+
+  .pagina-noticia {
+    width: calc(100% - 24px);
+    padding-top: 18px;
+  }
+}
+
+/* Elenco do Corinthians */
+.elenco-pagina {
+  width: min(100% - 32px, 980px);
+}
+
+.elenco-pagina > h1 {
+  margin-bottom: 22px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.grupo-elenco {
+  margin-bottom: 32px;
+}
+
+.grupo-elenco h2 {
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #111;
+  font-family: "Arial Narrow", Impact, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.grade-elenco {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.jogador {
+  overflow: hidden;
+  border: 1px solid #d1d1d1;
+  background: #fff;
+}
+
+.jogador img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+  background: #cfd0d2;
+}
+
+.jogador h3 {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 4px 12px;
+  background: #f4d43b;
+  color: #111;
+  font-family: "Arial Narrow", Impact, sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+  text-transform: uppercase;
+}
+
+.link-barra[aria-current="page"] {
+  background: #f4d43b;
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .elenco-pagina {
+    width: calc(100% - 24px);
+  }
+
+  .grade-elenco {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .jogador h3 {
+    min-height: 28px;
+    padding: 4px 8px;
+  }
+}
+
+.contato-area {
+  padding: 40px 24px;
+  background: #eee;
+}
+
+.contato-conteudo {
+  display: grid;
+  width: min(100%, 686px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 330px);
+  align-items: start;
+  gap: 48px;
+  margin: 0 auto;
+}
+
+.contato-informacoes h1 {
+  margin: 2px 0 28px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contato-informacoes dl {
+  display: grid;
+  gap: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.contato-informacoes dt {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contato-informacoes dd,
+.contato-informacoes dd a {
+  color: #222;
+  font-size: 17px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.botao-whatsapp {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 9px 14px;
+  border-radius: 4px;
+  background: #25b85a;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botao-whatsapp:hover {
+  background: #1e9d4c;
+}
+
+.botao-whatsapp img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.formulario-contato {
+  display: grid;
+  gap: 18px;
+  padding: 32px 22px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+  font: 16px "Segoe UI", Arial, sans-serif;
+}
+
+.formulario-contato input {
+  min-height: 46px;
+}
+
+.formulario-contato textarea {
+  min-height: 205px;
+  resize: vertical;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+  border-color: #777;
+  outline: 2px solid rgb(0 0 0 / 12%);
+}
+
+.formulario-contato button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 4px;
+  background: #050505;
+  color: #fff;
+  cursor: pointer;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.formulario-contato button:hover {
+  background: #333;
+}
+
+.texto-acessivel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.contato-final {
+  min-height: 100px;
+  padding: 36px max(16px, calc((100% - 686px) / 2));
+  background: #fff;
+}
+
+.contato-final h2 {
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 28px;
+  text-transform: none;
+}
+
+@media (max-width: 700px) {
+  .contato-area {
+    padding: 28px 16px;
+  }
+
+  .contato-conteudo {
+    width: min(100%, 440px);
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contato-informacoes h1 {
+    margin-bottom: 20px;
+  }
+
+  .formulario-contato {
+    padding: 22px 18px;
+  }
+
+  .formulario-contato textarea {
+    min-height: 170px;
+  }
+
+  .contato-final {
+    padding: 28px 16px;
+  }
+}
+
+.pagina-admin {
+  min-height: 100vh;
+  padding: 32px 16px;
+  background: #f1f1f1;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.painel-admin {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+}
+
+.painel-criar {
+  width: min(100%, 760px);
+}
+
+.voltar-site {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #222;
+  text-decoration: none;
+}
+
+.painel-admin h1 {
+  margin-bottom: 8px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 400;
+}
+
+.painel-admin > p,
+.cabecalho-criar p {
+  margin-bottom: 22px;
+  color: #555;
+}
+
+.cabecalho-criar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.formulario-admin {
+  display: grid;
+  gap: 10px;
+}
+
+.formulario-admin > label {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.formulario-admin input:not([type="radio"]),
+.formulario-admin textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  background: #fff;
+  color: #222;
+  font: 16px "Segoe UI", Arial, sans-serif;
+}
+
+.formulario-admin textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.campo-senha {
+  position: relative;
+}
+
+.campo-senha input {
+  padding-right: 48px;
+}
+
+.formulario-admin .campo-senha input.senha-visivel {
+  color: #777;
+  -webkit-text-fill-color: #777;
+}
+
+.formulario-admin .botao-senha {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: grid;
+  width: 34px;
+  min-width: 34px;
+  min-height: 34px;
+  place-items: center;
+  padding: 5px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #555;
+}
+
+.botao-senha svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.botao-senha .icone-olho-fechado {
+  width: 19px;
+  height: 19px;
+  transform: translateY(2px);
+}
+
+.formulario-admin .botao-senha:hover {
+  transform: translateY(-50%);
+  background: transparent;
+  color: #111;
+}
+
+.botao-excluir-noticia {
+  display: block;
+  margin: 8px 4px 4px auto;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 3px;
+  background: #b42318;
+  color: #fff;
+  cursor: pointer;
+  font: 700 14px "Segoe UI", Arial, sans-serif;
+}
+
+.botao-excluir-noticia:hover {
+  background: #8f1c13;
+}
+
+.dialogo-exclusao {
+  width: min(440px, calc(100% - 32px));
+  margin: auto;
+  padding: 24px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 25%);
+}
+
+.dialogo-exclusao::backdrop {
+  background: rgb(0 0 0 / 58%);
+}
+
+.dialogo-exclusao h2 {
+  margin-bottom: 10px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.dialogo-exclusao p {
+  line-height: 1.5;
+}
+
+.dialogo-exclusao .mensagem-exclusao {
+  margin-top: 10px;
+  color: #a00000;
+}
+
+.acoes-exclusao {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.dialogo-exclusao button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font: 700 14px "Segoe UI", Arial, sans-serif;
+}
+
+.botao-confirmar-exclusao {
+  background: #c62828;
+}
+
+.botao-confirmar-exclusao:hover {
+  background: #a51f1f;
+}
+
+.botao-voltar-exclusao {
+  background: #333;
+}
+
+.botao-voltar-exclusao:hover {
+  background: #111;
+}
+
+.formulario-admin input:focus,
+.formulario-admin textarea:focus {
+  border-color: #111;
+  outline: 2px solid rgb(0 0 0 / 12%);
+}
+
+.formulario-admin button,
+.botao-sair {
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 3px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font: 700 16px "Segoe UI", Arial, sans-serif;
+}
+
+.formulario-admin button:hover,
+.botao-sair:hover {
+  background: #333;
+}
+
+.botao-sair {
+  min-height: 40px;
+  font-size: 14px;
+}
+
+.perfil-na-navegacao {
+  display: inline-flex;
+  max-width: 220px;
+  align-items: center;
+  gap: 7px;
+}
+
+.botao,
+.botao-2,
+.botao-3,
+.botao-4,
+.botao-link,
+.botao-extra,
+.link-barra {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.botoes,
+.botoes a,
+.botoes button {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.link-barra,
+.botao,
+.botao-link,
+.botao-extra {
+  font-weight: 600;
+}
+
+.avatar-navegacao {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil-na-navegacao span {
+  max-width: 160px;
+  overflow: hidden;
+  text-transform: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.botao-link[hidden],
+.pagina-admin [hidden] {
+  display: none !important;
+}
+
+.painel-conta {
+  width: min(100%, 560px);
+}
+
+.abas-conta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.abas-conta button {
+  min-height: 42px;
+  border: 1px solid #111;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font: 700 15px "Segoe UI", Arial, sans-serif;
+}
+
+.abas-conta button[aria-selected="true"] {
+  background: #111;
+  color: #fff;
+}
+
+.perfil-conta,
+.perfil-admin {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0 24px;
+}
+
+.perfil-conta img,
+.perfil-admin img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil-conta h1 {
+  margin: 0 0 4px;
+}
+
+.perfil-conta p {
+  overflow-wrap: anywhere;
+  color: #555;
+}
+
+#sair-conta {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font: 700 15px "Segoe UI", Arial, sans-serif;
+}
+
+.aviso-conta {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.perfil-admin {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.perfil-admin img {
+  width: 40px;
+  height: 40px;
+}
+
+.mensagem-formulario {
+  min-height: 20px;
+  margin: 4px 0;
+  color: #a00000;
+}
+
+.tipo-noticia {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid #ccc;
+}
+
+.tipo-noticia legend {
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+.tipo-noticia label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .pagina-admin {
+    padding: 16px 10px;
+  }
+
+  .painel-admin {
+    padding: 20px 16px;
+  }
+
+  .cabecalho-criar {
+    align-items: center;
+  }
+
+  .formulario-admin input[type="file"] {
+    font-size: 14px;
+  }
+
+  .perfil-na-navegacao {
+    max-width: 160px;
+  }
+
+  .perfil-na-navegacao span {
+    max-width: 100px;
+  }
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bom and good.css">
+    <title>Criar notícia | Poderoso Timão</title>
+    <script src="noticias-admin.js" defer></script>
+</head>
+<body class="pagina-admin">
+    <main class="painel-admin painel-criar">
+        <a class="voltar-site" href="index.html">← Voltar ao site</a>
+        <div class="cabecalho-criar">
+            <div>
+                <div class="perfil-admin">
+                    <img src="avatar-anonimo.svg" alt="Foto de perfil anônima">
+                    <span>Administração</span>
+                </div>
+                <h1>Criar notícia</h1>
+                <p>Preencha os campos para publicar no site.</p>
+            </div>
+            <button class="botao-sair" id="sair-admin" type="button">Sair</button>
+        </div>
+        <form class="formulario-admin formulario-noticia" id="form-noticia">
+            <label for="titulo-noticia">Título</label>
+            <input id="titulo-noticia" name="titulo" type="text" required>
+
+            <label for="imagem-noticia">Imagem da notícia</label>
+            <input id="imagem-noticia" name="imagem" type="file" accept="image/*" required>
+
+            <label for="credito-imagem">Crédito da imagem (fonte/fotógrafo)</label>
+            <input id="credito-imagem" name="credito" type="text" required>
+
+            <label for="subtitulo-noticia">Subtítulo</label>
+            <input id="subtitulo-noticia" name="subtitulo" type="text" required>
+
+            <label for="tag-noticia">Etiqueta (tag)</label>
+            <input id="tag-noticia" name="tag" type="text" required>
+
+            <label for="texto-noticia">Notícia</label>
+            <textarea id="texto-noticia" name="texto" rows="10" required></textarea>
+
+            <label for="video-noticia">Vídeo da notícia</label>
+            <input id="video-noticia" name="video" type="file" accept="video/*" required>
+
+            <label for="legenda-video">Texto abaixo do vídeo (opcional)</label>
+            <textarea id="legenda-video" name="legendaVideo" rows="3"></textarea>
+
+            <fieldset class="tipo-noticia">
+                <legend>Classificação</legend>
+                <label><input type="radio" name="tipo" value="oficial" required> Oficial — notícia principal</label>
+                <label><input type="radio" name="tipo" value="rumor" required> Rumor — notícia secundária</label>
+            </fieldset>
+
+            <p class="mensagem-formulario" id="mensagem-noticia" role="status" aria-live="polite"></p>
+            <button type="submit">Publicar notícia</button>
+        </form>
+    </main>
+</body>
+</html>

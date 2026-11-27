@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bom and good.css">
+    <script src="senha-toggle.js" defer></script>
+    <title>Entrar | Administração</title>
+</head>
+<body class="pagina-admin">
+    <main class="painel-admin">
+        <a class="voltar-site" href="index.html">← Voltar ao site</a>
+        <h1>Área administrativa</h1>
+        <p>Entre para criar uma notícia.</p>
+        <form class="formulario-admin" id="form-login">
+            <label for="email-admin">E-mail</label>
+            <input id="email-admin" name="email" type="text" inputmode="email" autocomplete="username" required>
+            <label for="senha-admin">Senha</label>
+            <div class="campo-senha">
+                <input id="senha-admin" name="password" type="password" autocomplete="current-password" required>
+                <button class="botao-senha" type="button" aria-controls="senha-admin" aria-label="Mostrar senha" aria-pressed="false">
+                    <svg class="icone-olho-fechado" aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M3 8c2.7 4 5.7 6 9 6s6.3-2 9-6M3.5 8l-2-2m4.3 4.5-1.6 2m4.7-.1-.5 2.5m7.2-2.5.5 2.5m2.8-4.4 1.6 2m.4-4.5 2-2"/>
+                    </svg>
+                    <svg class="icone-olho-aberto" aria-hidden="true" viewBox="0 0 24 24" hidden>
+                        <path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12Z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="mensagem-formulario" id="mensagem-login" role="alert" aria-live="polite"></p>
+            <button type="submit">Entrar</button>
+        </form>
+    </main>
+    <script>
+        const formularioLogin = document.querySelector("#form-login");
+        const mensagemLogin = document.querySelector("#mensagem-login");
+
+        if (sessionStorage.getItem("poderoso-admin-autenticado") === "true") {
+            window.location.replace("index.html");
+        }
+
+        formularioLogin.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            const dados = new FormData(formularioLogin);
+            const email = dados.get("email");
+            const senha = dados.get("password");
+
+            if (email === "administração@timao.com" && senha === "AdministraçaodOcorinGao") {
+                sessionStorage.removeItem("poderoso-conta-logada");
+                sessionStorage.setItem("poderoso-admin-autenticado", "true");
+                window.location.href = "index.html";
+                return;
+            }
+
+            mensagemLogin.textContent = "E-mail ou senha incorretos.";
+        });
+    </script>
+</body>
+</html>
